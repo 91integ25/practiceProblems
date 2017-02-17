@@ -5,15 +5,16 @@
 </head>
 <body>
 <script type="text/javascript">
-	var bandArray = ["Mana", "passenger", "the Fray"];
-	var userband = prompt ("What is your favorite band?");
+	var bandArray = ["mana", "passenger", "the Fray"];
+	var userband = prompt ("What is your favorite band?").toLowerCase;
 
-	if (bandArray.indexof === userband) {
-		console.log ("Yeah I love them too!");
+	if (bandArray.indexOf(userband) === -1) {
+		console.log ("Nah they're lame");
 	}
-	else {
-		console.log("Nah they're lame");
-	};
+	else{
+		console.log("Yeah I love them too!");
+	}
+
 </script>
 
 </body>
