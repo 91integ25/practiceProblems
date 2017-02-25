@@ -9,15 +9,59 @@
 <p id="wins"></p>
 <p id="losses"></p>
 <script type="text/javascript">
-var comp = ["r", "p", "s"];
-var comp = Math.floor((Math.random) * comp);
- var	user = document.onkeyup = function () {
- 		console.log(comp)
-};
- 	
+// var compArray = ["r", "p", "s"];
+// var compChoice = compArray[Math.floor(Math.random() * compArray.length)];
+// console.log(compChoice);
+
+// r = 0  p = 1 s = 2
+
+//  document.onkeyup = function () {
+//  		var userChoice = event.key;
+//  		console.log(userChoice);
+
+// 	if (compChoice === "r" && userChoice === "s"){
+		
+// 		alert("user loses");
+// 	}
+// 	else if(compChoice === "s" && userChoice === "r"){
+// 		alert("user wins")
+// 	}
+// 	else if(compChoice === "p" && userChoice === "r"){
+// 		alert("user loses")
+// 	}
+// 	else if(compChoice === "r" && userChoice === "p"){
+// 		alert("user wins")
+// 	}
+// 	else if(compChoice === "s" && userChoice === "p"){
+// 		alert("user loses")
+// 	}
+// 	else if(compChoice === "p" && userChoice === "s"){
+// 		alert("user wins")
+		
+// 	}
+// 	else if (compChoice === userChoice) {
+		
+// 		alert("its a tie");
+// 	}
 	
-	
-	
+// };
+ var number = Math.floor(Math.random() * (102)+ 19); // 19-120
+ console.log(number);
+ var gemArray= [];
+
+function gemFunc() {
+
+	for (var i = 0; i < 4; i++){
+
+	var gem = Math.floor(Math.random() * 12) + 1 ;
+
+	gemArray.push(gem);
+}
+
+}
+
+
+
 </script>
 </body>
 </html>
