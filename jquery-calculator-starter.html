@@ -78,11 +78,61 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
+    var timer = 10;
+    var equationArray = [];
 
-// Your code here...
+$(".number").on("click", function(){
+
+    
+var numVals;
+numVals = $(this).attr('value');
+equationArray.push(numVals);
+checkEquation(numVals);
+
+});// end of on click function for number buttons 
+
+$("#button-plus,#button-minus,#button-divide,#button-power,#button-multiply").on("click", function(){
+    var opVals;
+    
+    opVals = $(this).text();
+    equationArray.push(opVals);
+
+ checkEquation(opVals);
+
+});// end of click function for operator buttons
 
 
-});
+$("#button-clear").on("click", function(){
+
+equationArray = [];
+$("#first-number,#operator,#second-number").empty();
+console.log(equationArray);
+
+}); // end of click function for clear button  
+
+function checkEquation(opVals, numVals){
+
+if(equationArray.indexOf(opVals) === -1){
+    $("#second-number").append(equationArray);
+}
+if(equationArray.includes(numVals)){
+ $("#first-number").append(equationArray);
+    console.log(equationArray);
+}
+
+
+}
+
+// setInterval(function(){
+// timer--;
+// console.log(equationArray);
+// },5000); // end of test array function
+
+}); // end of document ready function
+
+
+
+
 
 </script>
 
